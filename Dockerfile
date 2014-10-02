@@ -9,4 +9,7 @@ RUN apt-get update -y && \
 
 RUN apt-get purge -y python-software-properties && apt-get autoclean -y
 
+ADD ./supervisor/supervisor.conf /etc/supervisor/supervisor.conf
+ADD ./supervisor/wineapp.sv.conf /etc/supervisor/conf.d/
+
 CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
