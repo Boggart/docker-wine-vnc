@@ -1,4 +1,4 @@
 docker-wine-vnc
 ===============
 
-A Wine container for Docker, with a vnc server included.
+A MS Comic Chat Charater Editor container for Docker, with a vnc server and wine included.
