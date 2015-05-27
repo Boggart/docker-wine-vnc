@@ -1,4 +1,4 @@
 docker-wine-vnc
 ===============
 
-A Wine container for Docker, with a vnc server included.
+A Wine container for Docker based on alpine linux, with xvfb and x0vncserver included.
