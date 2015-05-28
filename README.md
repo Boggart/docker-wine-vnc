@@ -4,7 +4,7 @@ docker-wine-vnc
 A Wine container for Docker based on alpine linux, with xvfb and x0vncserver included.
 
 ## Usage:
-docker run -t --name <container name> -v <storage path>/startwine.sh:/usr/local/bin/startwine.sh:ro -v <storage path>/data:/home/winer -p <ports> boggart/docker-wine-vnc
+docker run -t --name <container name> -v <storage path>/startwine.sh:/usr/local/bin/startwine.sh:ro -v <storage path>/data:/home/winer -p <port>:<port> boggart/docker-wine-vnc
 
 ## Sample startwine.sh:
 ```#!/bin/sh
