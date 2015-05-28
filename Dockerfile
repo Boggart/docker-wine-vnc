@@ -1,6 +1,6 @@
 FROM gliderlabs/alpine:latest
 MAINTAINER Boggart "github.com/Boggart"
-RUN apk add --update pwgen xvfb wine linux-pam && rm -rf /var/cache/apk/* && mkdir /var/empty && rm /sbin/apk
+RUN apk add --update pwgen xvfb wine linux-pam wget && rm -rf /var/cache/apk/* && mkdir /var/empty && rm /sbin/apk
 RUN adduser -D -s /bin/bash winer
 RUN wget --no-check-certificate "https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk" && \
     apk add --allow-untrusted glibc-2.21-r2.apk && \
