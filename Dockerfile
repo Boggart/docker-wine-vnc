@@ -11,5 +11,5 @@ RUN apk add --update pwgen xvfb wine linux-pam wget && \
     wget --no-check-certificate http://winetricks.org/winetricks && chmod +x winetricks && mv winetricks /usr/bin/winetricks && ln -s /usr/bin/wine64 /usr/bin/wine && \
     adduser -D -s /bin/bash winer
 USER winer
-CMD ["~/startwine.sh"]
+CMD ["/home/winer/startwine.sh"]
 
