@@ -1,7 +1,7 @@
 FROM boggart/alpine-apk-static-32bit
 MAINTAINER Boggart "github.com/Boggart"
-RUN apk.static add --update pwgen xvfb wine linux-pam wget && \
-    wget --no-check-certificate "https://dl.dropboxusercontent.com/u/83869314/ShareX/2015/05/glibc-bin-2.21-r4.apk" && \
+RUN ["/sbin/apk.static", "add", "--update", "pwgen", "xvfb", "wine", "linux-pam", "wget"
+RUN wget --no-check-certificate "https://dl.dropboxusercontent.com/u/83869314/ShareX/2015/05/glibc-bin-2.21-r4.apk" && \
     apk add --allow-untrusted glibc-2.21-r4.apk && \
     wget --no-check-certificate "https://dl.dropboxusercontent.com/u/83869314/ShareX/2015/05/glibc-2.21-r4.apk" && \
     apk add --allow-untrusted glibc-bin-2.21-r4.apk && \
